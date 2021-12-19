@@ -1,0 +1,18 @@
+server:
+  port: 7001
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  application:
+    name: content-service
+
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    registry-fetch-interval-seconds: 5
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka
+

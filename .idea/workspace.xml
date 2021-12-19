@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c301dae4-8135-4c3f-b690-a831cde4edfe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+        <option value="Kotlin Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="11" />
+  </component>
+  <component name="ProjectId" id="21ccfdcbnjyhPcJTKaA3B6IIECQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.specialserver.controller" />
+      <recent name="com.example.specialserver.netty" />
+      <recent name="com.example.specialserver.reactor" />
+      <recent name="com.example.specialserver.util" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.WriteReadTest.testWriteRead">
+    <configuration name="InHanderlifeCircle.testInHanderlifeCircle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="special-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.specialserver.handler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.specialserver.handler" />
+      <option name="MAIN_CLASS_NAME" value="com.example.specialserver.handler.InHanderlifeCircle" />
+      <option name="METHOD_NAME" value="testInHanderlifeCircle" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Inpipeline.testPipelineInBound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="special-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.specialserver.pipeline.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.specialserver.pipeline" />
+      <option name="MAIN_CLASS_NAME" value="com.example.specialserver.pipeline.Inpipeline" />
+      <option name="METHOD_NAME" value="testPipelineInBound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OutPipeline.testPipelineOutBound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="special-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.specialserver.pipeline.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.specialserver.pipeline" />
+      <option name="MAIN_CLASS_NAME" value="com.example.specialserver.pipeline.OutPipeline" />
+      <option name="METHOD_NAME" value="testPipelineOutBound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PipelineHotOperateTester.testPipelineHotOperating" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="special-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.specialserver.pipeline.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.specialserver.pipeline" />
+      <option name="MAIN_CLASS_NAME" value="com.example.specialserver.pipeline.PipelineHotOperateTester" />
+      <option name="METHOD_NAME" value="testPipelineHotOperating" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WriteReadTest.testWriteRead" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="special-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.specialserver.byteBuf.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.specialserver.byteBuf" />
+      <option name="MAIN_CLASS_NAME" value="com.example.specialserver.byteBuf.WriteReadTest" />
+      <option name="METHOD_NAME" value="testWriteRead" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="api-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.apigateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContentServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="content-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.content.ContentServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurkaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="eurka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.eurkaserver.EurkaServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.gateway.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpecialServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="special-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.specialserver.SpecialServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="test" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.test.TestApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.WriteReadTest.testWriteRead" />
+        <item itemvalue="JUnit.Inpipeline.testPipelineInBound" />
+        <item itemvalue="JUnit.PipelineHotOperateTester.testPipelineHotOperating" />
+        <item itemvalue="JUnit.OutPipeline.testPipelineOutBound" />
+        <item itemvalue="JUnit.InHanderlifeCircle.testInHanderlifeCircle" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c301dae4-8135-4c3f-b690-a831cde4edfe" name="Default Changelist" comment="" />
+      <created>1638243920118</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638243920118</updated>
+      <workItem from="1638243923990" duration="50549000" />
+      <workItem from="1638616851526" duration="6317000" />
+      <workItem from="1638695236170" duration="17883000" />
+      <workItem from="1639490794660" duration="11983000" />
+      <workItem from="1639626060375" duration="13000" />
+      <workItem from="1639626538124" duration="26750000" />
+      <workItem from="1639743946938" duration="4793000" />
+    </task>
+    <task id="LOCAL-00001" summary="第一次提交">
+      <created>1639925930722</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1639925930722</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="第一次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="第一次提交" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Inspections" timestamp="1638279374329">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1638279374329" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1639721828461">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1639721828460" />
+    <state x="416" y="115" key="CommitChangelistDialog2" timestamp="1639926936409">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="416" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1639926936409" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1639925860737">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1639925860737" />
+    <state width="1877" height="466" key="GridCell.Tab.0.bottom" timestamp="1639923137472">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="466" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1639923137472" />
+    <state width="1877" height="466" key="GridCell.Tab.0.center" timestamp="1639923137472">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="466" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1639923137472" />
+    <state width="1877" height="466" key="GridCell.Tab.0.left" timestamp="1639923137472">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="466" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1639923137472" />
+    <state width="1877" height="466" key="GridCell.Tab.0.right" timestamp="1639923137472">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="466" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1639923137472" />
+    <state width="1877" height="779" key="GridCell.Tab.1.bottom" timestamp="1639743873086">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="779" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1639743873086" />
+    <state width="1877" height="779" key="GridCell.Tab.1.center" timestamp="1639743873085">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="779" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1639743873085" />
+    <state width="1877" height="779" key="GridCell.Tab.1.left" timestamp="1639743873085">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="779" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1639743873085" />
+    <state width="1877" height="779" key="GridCell.Tab.1.right" timestamp="1639743873086">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="779" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1639743873086" />
+    <state width="1877" height="330" key="GridCell.Tab.2.bottom" timestamp="1639735839976">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="330" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1639735839976" />
+    <state width="1877" height="330" key="GridCell.Tab.2.center" timestamp="1639735839976">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="330" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1639735839976" />
+    <state width="1877" height="330" key="GridCell.Tab.2.left" timestamp="1639735839976">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="330" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1639735839976" />
+    <state width="1877" height="330" key="GridCell.Tab.2.right" timestamp="1639735839976">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="330" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1639735839976" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1639733706559">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1639733706559" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1639926945777">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1639926945777" />
+    <state x="636" y="253" width="647" height="534" key="find.popup" timestamp="1639735710894">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="636" y="253" width="647" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1639735710894" />
+    <state x="334" y="221" key="new project wizard" timestamp="1638330698242">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="334" y="221" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1638330698242" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1639735563349">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1639735563349" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/special-server/src/main/java/com/example/specialserver/reactor/EchoClient.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/special-server/src/main/java/com/example/specialserver/config/RedissonConfiguration.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/redisson/redisson-spring-boot-starter/3.13.1/redisson-spring-boot-starter-3.13.1.jar!/org/redisson/spring/starter/RedissonAutoConfiguration.class</url>
+          <line>87</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

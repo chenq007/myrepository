@@ -1,0 +1,57 @@
+server:
+  port: 7000
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  application:
+    name: special-service
+
+  redis:
+    host: 192.168.52.113
+    lettuce:
+      pool:
+        max-active: 100
+        max-idle: 8
+        max-wait: -1
+        min-idle: 10
+#    password: ''
+    port: 6379
+    timeout: 10000ms
+    database: 4
+
+#structure:
+#  redisson:
+#    #指定连接方式
+#    model: single
+##    password: ''
+#    single:
+#      #默认情况下只需要配置地址
+#      address: redis://192.168.52.113:6379
+#    cache:
+#      key-group-name: test
+
+#主从模式
+#structure:
+#  redisson:
+#    model: master-slave
+#    password: ''
+#    master-slave:
+#      master-address: redis://192.168.52.113:6379
+##      slave-addresses: redis://192.168.2.138:26371,redis://192.168.2.138:26372,redis://192.168.2.138:26373
+
+##托管模式
+#structure:
+#  redisson:
+#    model: replicated
+#    replicated:
+#      node-addresses: redis://192.168.2.138:26371,redis://192.168.2.138:26372,redis://192.168.2.138:26373
+
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true
+  client:
+    register-with-eureka: false
+    registry-fetch-interval-seconds: 5
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka

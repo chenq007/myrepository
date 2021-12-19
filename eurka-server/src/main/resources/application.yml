@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: bifrost-eureka-server
+server:
+  port: 9001
+
+eureka:
+  instance:
+    hostname: bifrost-eureka-server
+  client:
+    register-with-eureka: false
+    fetch-registry: false
