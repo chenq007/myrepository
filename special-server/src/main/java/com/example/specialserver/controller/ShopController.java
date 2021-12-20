@@ -23,7 +23,7 @@ public class ShopController {
     @Autowired
     private RedissonClient redissonClient;
 
-
+    @Autowired
     private IDistributedLocker distributedLocker;
 
     @GetMapping("set")
@@ -69,13 +69,15 @@ public class ShopController {
     @PostMapping("shoping1")
     public String  shoping1(){
         String lockkey = "lockkey";
-        RLock lock = redissonClient.getLock(lockkey);
+        RLock lock = distributedLocker.lock(lockkey);
         try {
 //             distributedLocker.lock(lockkey, TimeUnit.MILLISECONDS, 10);
             lock.lock(10,TimeUnit.MILLISECONDS);
-                Integer count = (Integer) redisTemplate.opsForValue().get(keys);
-
-
+//            boolean b = lock.tryLock(10, 10, TimeUnit.MILLISECONDS);
+//            if (!b){
+//                System.out.println("活动火爆进行中，请重试....");
+//            }
+            Integer count = (Integer) redisTemplate.opsForValue().get(keys);
             Logger.info("lock:" + lock.toString() + ",interrupted:" + Thread.currentThread().isInterrupted()
                     + ",hold:" + lock.isHeldByCurrentThread() + ",threadId:" + Thread.currentThread().getId());
 
@@ -97,4 +99,6 @@ public class ShopController {
 //            distributedLocker.unlock();
         }
     }
+
+
 }

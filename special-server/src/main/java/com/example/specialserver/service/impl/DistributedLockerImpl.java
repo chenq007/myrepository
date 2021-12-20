@@ -3,15 +3,15 @@ package com.example.specialserver.service.impl;
 import com.example.specialserver.service.IDistributedLocker;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.concurrent.TimeUnit;
-
+@Service
 public class DistributedLockerImpl implements IDistributedLocker {
 
-    private RedissonClient redissonClient;
-    public DistributedLockerImpl(RedissonClient redissonClient){
-        this.redissonClient = redissonClient;
-    }
+    @Autowired
+    private  RedissonClient redissonClient;
 
     @Override
     public RLock lock(String lockKey) {
