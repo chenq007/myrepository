@@ -1,8 +1,13 @@
 package com.example.content.netty;
 
+import com.example.content.data.MessageRequestPacket;
+import com.example.content.data.PackerCodeC;
+import com.example.content.handler.ClientHandler;
 import com.example.content.handler.FirstClientHandler;
 import io.netty.bootstrap.Bootstrap;
+import io.netty.buffer.ByteBuf;
 import io.netty.channel.Channel;
+import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
@@ -10,7 +15,9 @@ import io.netty.handler.codec.string.StringDecoder;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
 
+import java.io.IOException;
 import java.util.Date;
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class NettyClient {
@@ -24,11 +31,11 @@ public class NettyClient {
                 .handler(new ChannelInitializer<Channel>() {
                 @Override
                 protected void initChannel(Channel ch){
-                 ch.pipeline().addLast(new FirstClientHandler());
+                 ch.pipeline().addLast(new ClientHandler());
                 }
                 });
 
-        contect(bootstrap,"127.0.0.1",8080,MAX_RETRY);
+        contect(bootstrap,"127.0.0.1",8081,MAX_RETRY);
          
 
     }
@@ -36,7 +43,9 @@ public class NettyClient {
     private static void contect(Bootstrap bootstrap,String host,int port,int retry){
         bootstrap.connect(host,port).addListener(feature ->{
            if (feature.isSuccess()){
-               System.out.println("连接成功!");
+               System.out.println("连接成功,启动线程控制台!");
+               Channel channel = ((ChannelFuture) feature).channel();
+               startConsoleThread(channel);
            }else if (retry ==0){
                System.out.println("重试次数已经用完，放弃连接!");
            }else {
@@ -47,5 +56,26 @@ public class NettyClient {
                bootstrap.config().group().schedule(() ->contect(bootstrap,host,port,retry - 1),delay, TimeUnit.SECONDS);
            }
         });
+    }
+
+    private static void startConsoleThread(Channel channel){
+        new Thread(() ->{
+            while (!Thread.interrupted()) {
+                if (LoginUtil.hasLogin(channel)){
+                    System.out.println("输入消息发送至服务器");
+                    Scanner sc =new Scanner(System.in);
+                    String line = sc.nextLine();
+
+                    MessageRequestPacket packet = new MessageRequestPacket();
+                    packet.setMessage(line);
+                    try {
+                        ByteBuf byteBuf = PackerCodeC.getInstance().encode(channel.alloc(),packet);
+                        channel.writeAndFlush(byteBuf);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
     }
 }

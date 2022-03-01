@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c301dae4-8135-4c3f-b690-a831cde4edfe" name="Default Changelist" comment="第一次提交">
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/factory/FactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/factory/SendFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/factory/Sender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/factory/impl/MailSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/factory/impl/SmsSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/tree/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/tree/Tree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_client_2_2_5_RELEASE.xml" beforeDir="false" />
+    <list default="true" id="c301dae4-8135-4c3f-b690-a831cde4edfe" name="Default Changelist" comment="redis分布式锁优化">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/LoginResponsePacket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/MessageRequestPacket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/MessageResponsePacket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/PackerCodeC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/ClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/ServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/netty/LoginUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/serializ/Attributes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/serializ/impl/HessianSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/serializ/impl/JSONSerializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/ContentServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/ContentServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/LoginRequestPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/LoginRequestPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/enmus/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/enmus/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/enmus/SerializerAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/enmus/SerializerAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/netty/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/netty/NettyClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/netty/NettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/serializ/Serializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/serializ/Serializer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +79,7 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -85,19 +93,20 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.content.data" />
       <recent name="com.example.specialserver.controller" />
       <recent name="com.example.specialserver.netty" />
       <recent name="com.example.specialserver.reactor" />
       <recent name="com.example.specialserver.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FactoryTest">
-    <configuration name="FactoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.content.factory.FactoryTest" />
+  <component name="RunManager" selected="Application.NettyClient">
+    <configuration name="ByteBufTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.content.netty.ByteBufTest" />
       <module name="content-server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.content.factory.*" />
+          <option name="PATTERN" value="com.example.content.netty.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,12 +114,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.content.tree.Tree" />
+    <configuration name="IOClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.content.netty.IOClient" />
       <module name="content-server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.content.tree.*" />
+          <option name="PATTERN" value="com.example.content.netty.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,50 +127,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Inpipeline.testPipelineInBound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="special-server" />
+    <configuration name="IOServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.content.netty.IOServer" />
+      <module name="content-server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.specialserver.pipeline.*" />
+          <option name="PATTERN" value="com.example.content.netty.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.specialserver.pipeline" />
-      <option name="MAIN_CLASS_NAME" value="com.example.specialserver.pipeline.Inpipeline" />
-      <option name="METHOD_NAME" value="testPipelineInBound" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PipelineHotOperateTester.testPipelineHotOperating" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="special-server" />
+    <configuration name="NettyClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.content.netty.NettyClient" />
+      <module name="content-server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.specialserver.pipeline.*" />
+          <option name="PATTERN" value="com.example.content.netty.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.specialserver.pipeline" />
-      <option name="MAIN_CLASS_NAME" value="com.example.specialserver.pipeline.PipelineHotOperateTester" />
-      <option name="METHOD_NAME" value="testPipelineHotOperating" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WriteReadTest.testWriteRead" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="special-server" />
+    <configuration name="NettyServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.content.netty.NettyServer" />
+      <module name="content-server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.specialserver.byteBuf.*" />
+          <option name="PATTERN" value="com.example.content.netty.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.specialserver.byteBuf" />
-      <option name="MAIN_CLASS_NAME" value="com.example.specialserver.byteBuf.WriteReadTest" />
-      <option name="METHOD_NAME" value="testWriteRead" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -210,11 +210,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FactoryTest" />
-        <item itemvalue="Application.Tree" />
-        <item itemvalue="JUnit.WriteReadTest.testWriteRead" />
-        <item itemvalue="JUnit.Inpipeline.testPipelineInBound" />
-        <item itemvalue="JUnit.PipelineHotOperateTester.testPipelineHotOperating" />
+        <item itemvalue="Application.NettyClient" />
+        <item itemvalue="Application.NettyServer" />
+        <item itemvalue="Application.ByteBufTest" />
+        <item itemvalue="Application.IOClient" />
+        <item itemvalue="Application.IOServer" />
       </list>
     </recent_temporary>
   </component>
@@ -238,6 +238,7 @@
       <workItem from="1639626060375" duration="13000" />
       <workItem from="1639626538124" duration="26750000" />
       <workItem from="1639743946938" duration="34959000" />
+      <workItem from="1645691669343" duration="51301000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1639925930722</created>
@@ -260,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640059804126</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="IM netty 实现 first commit">
+      <created>1646031998853</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1646031998853</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,25 +278,26 @@
     <MESSAGE value="第一次提交" />
     <MESSAGE value="redission分布式锁完善" />
     <MESSAGE value="redis分布式锁优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="redis分布式锁优化" />
+    <MESSAGE value="IM netty 实现 first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="IM netty 实现 first commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Inspections" timestamp="1638279374329">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1638279374329" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1640837083910">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1646122755122">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1640837083910" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1646122755122" />
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1639993807891">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1639993807891" />
-    <state x="416" y="115" key="CommitChangelistDialog2" timestamp="1640059803750">
+    <state x="416" y="115" key="CommitChangelistDialog2" timestamp="1646031998215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="416" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1640059803750" />
+    <state x="416" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1646031998215" />
     <state x="40" y="88" key="DiffContextDialog" timestamp="1639995243717">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -297,38 +306,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1639927545456" />
-    <state width="1877" height="464" key="GridCell.Tab.0.bottom" timestamp="1640838232970">
+    <state width="1877" height="681" key="GridCell.Tab.0.bottom" timestamp="1646125873222">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="464" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1640838232970" />
-    <state width="1877" height="464" key="GridCell.Tab.0.center" timestamp="1640838232970">
+    <state width="1877" height="681" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1646125873222" />
+    <state width="1877" height="681" key="GridCell.Tab.0.center" timestamp="1646125873222">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="464" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1640838232970" />
-    <state width="1877" height="464" key="GridCell.Tab.0.left" timestamp="1640838232970">
+    <state width="1877" height="681" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1646125873222" />
+    <state width="1877" height="681" key="GridCell.Tab.0.left" timestamp="1646125873222">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="464" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1640838232970" />
-    <state width="1877" height="464" key="GridCell.Tab.0.right" timestamp="1640838232970">
+    <state width="1877" height="681" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1646125873222" />
+    <state width="1877" height="681" key="GridCell.Tab.0.right" timestamp="1646125873222">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="464" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1640838232970" />
-    <state width="1877" height="464" key="GridCell.Tab.1.bottom" timestamp="1640770046542">
+    <state width="1877" height="681" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1646125873222" />
+    <state width="1877" height="428" key="GridCell.Tab.1.bottom" timestamp="1646125867377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="464" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1640770046542" />
-    <state width="1877" height="464" key="GridCell.Tab.1.center" timestamp="1640770046542">
+    <state width="1877" height="428" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1646125867377" />
+    <state width="1877" height="428" key="GridCell.Tab.1.center" timestamp="1646125867377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="464" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1640770046542" />
-    <state width="1877" height="464" key="GridCell.Tab.1.left" timestamp="1640770046542">
+    <state width="1877" height="428" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1646125867377" />
+    <state width="1877" height="428" key="GridCell.Tab.1.left" timestamp="1646125867377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="464" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1640770046542" />
-    <state width="1877" height="464" key="GridCell.Tab.1.right" timestamp="1640770046542">
+    <state width="1877" height="428" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1646125867377" />
+    <state width="1877" height="428" key="GridCell.Tab.1.right" timestamp="1646125867377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="464" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1640770046542" />
+    <state width="1877" height="428" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1646125867377" />
     <state width="1877" height="795" key="GridCell.Tab.2.bottom" timestamp="1640051997410">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -353,26 +362,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1639989496915" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1640059805193">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1646032001141">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1640059805193" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1646032001141" />
     <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1639985833878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1639985833878" />
-    <state x="636" y="253" width="647" height="534" key="find.popup" timestamp="1639988534184">
+    <state x="636" y="253" width="647" height="534" key="find.popup" timestamp="1646119335156">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="636" y="253" width="647" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1639988534184" />
+    <state x="636" y="253" width="647" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1646119335156" />
     <state x="334" y="221" key="new project wizard" timestamp="1638330698242">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="334" y="221" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1638330698242" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1639735563349">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1646115420488">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1639735563349" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1646115420488" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -381,6 +390,16 @@
           <url>file://$PROJECT_DIR$/special-server/src/main/java/com/example/specialserver/reactor/EchoClient.java</url>
           <line>28</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/FirstClientHandler.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/ServerHandler.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
