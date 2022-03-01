@@ -1,7 +1,6 @@
 package com.example.content.netty;
 
-import com.example.content.handler.FirstServerHandler;
-import com.example.content.handler.ServerHandler;
+import com.example.content.handler.*;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInitializer;
@@ -26,7 +25,14 @@ public class NettyServer {
                 .childOption(ChannelOption.SO_KEEPALIVE,true)
                 .childOption(ChannelOption.TCP_NODELAY,true)
                 .option(ChannelOption.SO_BACKLOG,1024)
-                .childHandler(new ServerHandler());
+                .childHandler(new ChannelInitializer<NioSocketChannel>() {
+                    @Override
+                    protected void initChannel(NioSocketChannel ch){
+                        ch.pipeline().addLast(new InBoundHandlerA());
+                        ch.pipeline().addLast(new InBoundHandlerB());
+                        ch.pipeline().addLast(new InBoundHandlerC());
+                    }
+                });
         bind(serverBootstrap,8081);
     }
     private static void bind(final ServerBootstrap serverBootstrap,final int port){
