@@ -5,6 +5,7 @@ import com.example.content.data.MessageRequestPacket;
 import com.example.content.data.PackerCodeC;
 import com.example.content.decode.PacketDecoder;
 import com.example.content.decode.PacketEncoder;
+import com.example.content.decode.Spliter;
 import com.example.content.handler.ClientHandler;
 import com.example.content.handler.FirstClientHandler;
 import com.example.content.handler.LoginResponseHandler;
@@ -16,6 +17,7 @@ import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
@@ -36,6 +38,7 @@ public class NettyClient {
                 .handler(new ChannelInitializer<Channel>() {
                 @Override
                 protected void initChannel(Channel ch){
+                 ch.pipeline().addLast(new Spliter());
                  ch.pipeline().addLast(new PacketDecoder());
                  ch.pipeline().addLast(new LoginResponseHandler());
                  ch.pipeline().addLast(new MessageResponseHnadler());
