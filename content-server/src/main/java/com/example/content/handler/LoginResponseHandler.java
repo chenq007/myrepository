@@ -20,7 +20,7 @@ public class LoginResponseHandler extends SimpleChannelInboundHandler<LoginRespo
         loginRequestPacket.setPassWord("pwd123");
 
 
-        ctx.channel().writeAndFlush(loginRequestPacket);
+//        ctx.channel().writeAndFlush(loginRequestPacket);
     }
 
     @Override
