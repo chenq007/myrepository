@@ -22,9 +22,8 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
         loginRequestPacket.setUserName("cqq");
         loginRequestPacket.setPassWord("pwd123");
 
-        ByteBuf byteBuf = PackerCodeC.getInstance().encode(ctx.alloc(), loginRequestPacket);
 
-        ctx.channel().writeAndFlush(byteBuf);
+        ctx.channel().writeAndFlush(loginRequestPacket);
     }
 
     @Override
@@ -44,7 +43,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             }
         } else if (packet instanceof MessageResponsePacket) {
             MessageResponsePacket messageResponsePacket = (MessageResponsePacket) packet;
-            System.out.println(new Date() + ":收到服务端的消息：" +messageResponsePacket.getMessage());
+            System.out.println(new Date() + "");
         }
     }
 }

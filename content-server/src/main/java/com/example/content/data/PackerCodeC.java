@@ -47,14 +47,9 @@ public class PackerCodeC {
 
     }
 
-    public ByteBuf encode(ByteBufAllocator byteBufAllocator, Packet packet) throws IOException {
-
-        //创建 ByteBuf 对象
-        ByteBuf byteBuf = byteBufAllocator.ioBuffer();
-
+    public ByteBuf encode(ByteBuf byteBuf , Packet packet) throws IOException {
         //序列化 Java 对象
         byte[] bytes = Serializer.DEFAULT.serialize(packet);
-
         //实际编码过程
         byteBuf.writeInt(MAGIC_NUMBER);
         byteBuf.writeByte(packet.getVersion());

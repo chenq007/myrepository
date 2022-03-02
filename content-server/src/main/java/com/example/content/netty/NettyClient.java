@@ -1,9 +1,14 @@
 package com.example.content.netty;
 
+import com.example.content.data.LoginResponsePacket;
 import com.example.content.data.MessageRequestPacket;
 import com.example.content.data.PackerCodeC;
+import com.example.content.decode.PacketDecoder;
+import com.example.content.decode.PacketEncoder;
 import com.example.content.handler.ClientHandler;
 import com.example.content.handler.FirstClientHandler;
+import com.example.content.handler.LoginResponseHandler;
+import com.example.content.handler.MessageResponseHnadler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.Channel;
@@ -31,7 +36,10 @@ public class NettyClient {
                 .handler(new ChannelInitializer<Channel>() {
                 @Override
                 protected void initChannel(Channel ch){
-                 ch.pipeline().addLast(new ClientHandler());
+                 ch.pipeline().addLast(new PacketDecoder());
+                 ch.pipeline().addLast(new LoginResponseHandler());
+                 ch.pipeline().addLast(new MessageResponseHnadler());
+                 ch.pipeline().addLast(new PacketEncoder());
                 }
                 });
 
@@ -65,15 +73,10 @@ public class NettyClient {
                     System.out.println("输入消息发送至服务器");
                     Scanner sc =new Scanner(System.in);
                     String line = sc.nextLine();
-
                     MessageRequestPacket packet = new MessageRequestPacket();
                     packet.setMessage(line);
-                    try {
-                        ByteBuf byteBuf = PackerCodeC.getInstance().encode(channel.alloc(),packet);
-                        channel.writeAndFlush(byteBuf);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                        channel.writeAndFlush(packet);
+
                 }
             }
         }).start();
