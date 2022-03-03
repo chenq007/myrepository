@@ -1,28 +1,21 @@
 package com.example.content.netty;
 
+import com.example.content.data.LoginRequestPacket;
 import com.example.content.data.LoginResponsePacket;
 import com.example.content.data.MessageRequestPacket;
 import com.example.content.data.PackerCodeC;
 import com.example.content.decode.PacketDecoder;
 import com.example.content.decode.PacketEncoder;
+import com.example.content.decode.SessionUtil;
 import com.example.content.decode.Spliter;
-import com.example.content.handler.ClientHandler;
-import com.example.content.handler.FirstClientHandler;
 import com.example.content.handler.LoginResponseHandler;
 import com.example.content.handler.MessageResponseHnadler;
 import io.netty.bootstrap.Bootstrap;
-import io.netty.buffer.ByteBuf;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
-import io.netty.handler.codec.string.StringDecoder;
-import io.netty.util.concurrent.Future;
-import io.netty.util.concurrent.GenericFutureListener;
-
-import java.io.IOException;
 import java.util.Date;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -70,18 +63,35 @@ public class NettyClient {
     }
 
     private static void startConsoleThread(Channel channel){
+        Scanner sc =new Scanner(System.in);
+        LoginRequestPacket loginRequestPacket = new LoginRequestPacket();
         new Thread(() ->{
             while (!Thread.interrupted()) {
-                if (LoginUtil.hasLogin(channel)){
-                    System.out.println("输入消息发送至服务器");
-                    Scanner sc =new Scanner(System.in);
-                    String line = sc.nextLine();
-                    MessageRequestPacket packet = new MessageRequestPacket();
-                    packet.setMessage(line);
-                        channel.writeAndFlush(packet);
+                if (!SessionUtil.hasLogin(channel)){
+                    System.out.print("输入用户名登陆:");
 
+                    String userName = sc.nextLine();
+                    loginRequestPacket.setUserName(userName);
+                    loginRequestPacket.setPassWord("pwd123");
+
+                       channel.writeAndFlush(loginRequestPacket);
+                       waitForLoginResponse();
+
+                } else {
+                    String toUserId =sc.next();
+                    String message =sc.next();
+                    channel.writeAndFlush(new MessageRequestPacket(toUserId,message));
                 }
             }
         }).start();
     }
+
+    private static void waitForLoginResponse(){
+        try {
+            Thread.sleep(1000);
+        }catch (Exception ingrod){
+
+        }
+    }
+
 }

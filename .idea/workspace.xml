@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c301dae4-8135-4c3f-b690-a831cde4edfe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/decode/Spliter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/Session.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/decode/SessionUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/LoginResponsePacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/LoginResponsePacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/MessageRequestPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/MessageRequestPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/MessageResponsePacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/MessageResponsePacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/AuthHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/AuthHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/LoginRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/LoginRequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/LoginResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/LoginResponseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/MessageRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/MessageRequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/MessageResponseHnadler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/MessageResponseHnadler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/netty/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/netty/NettyClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/netty/NettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/serializ/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/serializ/Attributes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +49,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="构建客户端与服务端pipeline" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -130,7 +140,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NettyClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="NettyClient" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.content.netty.NettyClient" />
       <module name="content-server" />
       <extension name="coverage">
@@ -198,12 +208,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.ByteBufTest" />
+      <item itemvalue="Application.IOClient" />
+      <item itemvalue="Application.IOServer" />
+      <item itemvalue="Application.NettyClient" />
+      <item itemvalue="Application.NettyServer" />
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.ContentServerApplication" />
+      <item itemvalue="Spring Boot.EurkaServerApplication" />
+      <item itemvalue="Spring Boot.GatewayApplication" />
+      <item itemvalue="Spring Boot.SpecialServerApplication" />
+      <item itemvalue="Spring Boot.TestApplication" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.NettyServer" />
         <item itemvalue="Application.NettyClient" />
-        <item itemvalue="Application.ByteBufTest" />
+        <item itemvalue="Application.NettyServer" />
         <item itemvalue="Application.IOClient" />
+        <item itemvalue="Application.ByteBufTest" />
         <item itemvalue="Application.IOServer" />
       </list>
     </recent_temporary>
@@ -272,7 +295,21 @@
       <option name="project" value="LOCAL" />
       <updated>1646145914486</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="拆包与粘包的实践">
+      <created>1646205382980</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1646205382980</updated>
+    </task>
+    <task id="LOCAL-00008" summary="热插拔的实践">
+      <created>1646210200727</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1646210200727</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,25 +322,31 @@
     <MESSAGE value="IM netty 实现 first commit" />
     <MESSAGE value="客户端实现 登陆与控制台输出" />
     <MESSAGE value="pipilne 生命周期" />
-    <option name="LAST_COMMIT_MESSAGE" value="pipilne 生命周期" />
+    <MESSAGE value="拆包与粘包的实践" />
+    <MESSAGE value="热插拔的实践" />
+    <option name="LAST_COMMIT_MESSAGE" value="热插拔的实践" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Inspections" timestamp="1638279374329">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1638279374329" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1646204087173">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1646274933304">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1646204087173" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1646274933304" />
+    <state x="765" y="229" width="629" height="581" key="#com.intellij.ide.util.MemberChooser" timestamp="1646278825281">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="229" width="629" height="581" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1646278825281" />
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1639993807891">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1639993807891" />
-    <state x="416" y="115" key="CommitChangelistDialog2" timestamp="1646202183404">
+    <state x="416" y="115" key="CommitChangelistDialog2" timestamp="1646210200291">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="416" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1646202183404" />
+    <state x="416" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1646210200291" />
     <state x="40" y="88" key="DiffContextDialog" timestamp="1639995243717">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -312,38 +355,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1646146633717" />
-    <state width="1877" height="428" key="GridCell.Tab.0.bottom" timestamp="1646205111796">
+    <state width="1877" height="508" key="GridCell.Tab.0.bottom" timestamp="1646281080246">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="428" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1646205111796" />
-    <state width="1877" height="428" key="GridCell.Tab.0.center" timestamp="1646205111796">
+    <state width="1877" height="508" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1646281080246" />
+    <state width="1877" height="508" key="GridCell.Tab.0.center" timestamp="1646281080246">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="428" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1646205111796" />
-    <state width="1877" height="428" key="GridCell.Tab.0.left" timestamp="1646205111796">
+    <state width="1877" height="508" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1646281080246" />
+    <state width="1877" height="508" key="GridCell.Tab.0.left" timestamp="1646281080246">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="428" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1646205111796" />
-    <state width="1877" height="428" key="GridCell.Tab.0.right" timestamp="1646205111796">
+    <state width="1877" height="508" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1646281080246" />
+    <state width="1877" height="508" key="GridCell.Tab.0.right" timestamp="1646281080246">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="428" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1646205111796" />
-    <state width="1877" height="428" key="GridCell.Tab.1.bottom" timestamp="1646205111797">
+    <state width="1877" height="508" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1646281080246" />
+    <state width="1877" height="448" key="GridCell.Tab.1.bottom" timestamp="1646279432727">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="428" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1646205111797" />
-    <state width="1877" height="428" key="GridCell.Tab.1.center" timestamp="1646205111796">
+    <state width="1877" height="448" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1646279432727" />
+    <state width="1877" height="448" key="GridCell.Tab.1.center" timestamp="1646279432727">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="428" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1646205111796" />
-    <state width="1877" height="428" key="GridCell.Tab.1.left" timestamp="1646205111796">
+    <state width="1877" height="448" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1646279432727" />
+    <state width="1877" height="448" key="GridCell.Tab.1.left" timestamp="1646279432727">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="428" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1646205111796" />
-    <state width="1877" height="428" key="GridCell.Tab.1.right" timestamp="1646205111796">
+    <state width="1877" height="448" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1646279432727" />
+    <state width="1877" height="448" key="GridCell.Tab.1.right" timestamp="1646279432727">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="428" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1646205111796" />
+    <state width="1877" height="448" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1646279432727" />
     <state width="1877" height="795" key="GridCell.Tab.2.bottom" timestamp="1640051997410">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -368,18 +411,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1646147492988" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1646145915634">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1646210201730">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1646145915634" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1646210201730" />
     <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1646202192475">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1646202192475" />
-    <state x="636" y="253" width="647" height="534" key="find.popup" timestamp="1646119335156">
+    <state x="636" y="253" width="786" height="600" key="find.popup" timestamp="1646277364236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="636" y="253" width="647" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1646119335156" />
+    <state x="636" y="253" width="786" height="600" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1646277364236" />
     <state x="334" y="221" key="new project wizard" timestamp="1638330698242">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -406,6 +449,16 @@
           <url>file://$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/ServerHandler.java</url>
           <line>12</line>
           <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/MessageRequestHandler.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/content-server/src/main/java/com/example/content/netty/NettyClient.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

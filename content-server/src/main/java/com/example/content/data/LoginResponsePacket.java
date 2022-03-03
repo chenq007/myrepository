@@ -10,9 +10,13 @@ import static com.example.content.enmus.Command.LOGIN_RESPONSE;
 @Data
 public class LoginResponsePacket extends Packet implements Serializable {
 
+    private String userId;
+
     private boolean success;
 
     private String reason;
+
+    private String userName;
 
     @Override
     public Byte getCommand() {

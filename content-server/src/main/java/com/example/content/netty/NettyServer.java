@@ -3,10 +3,7 @@ package com.example.content.netty;
 import com.example.content.decode.PacketDecoder;
 import com.example.content.decode.PacketEncoder;
 import com.example.content.decode.Spliter;
-import com.example.content.handler.FirstServerHandler;
-import com.example.content.handler.LoginRequestHandler;
-import com.example.content.handler.MessageRequestHandler;
-import com.example.content.handler.ServerHandler;
+import com.example.content.handler.*;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInitializer;
@@ -35,9 +32,10 @@ public class NettyServer {
                 .childHandler(new ChannelInitializer<NioSocketChannel>() {
                     @Override
                     protected void initChannel(NioSocketChannel ch) throws Exception {
-//                        ch.pipeline().addLast(new Spliter());
                         ch.pipeline().addLast(new PacketDecoder());
                         ch.pipeline().addLast(new LoginRequestHandler());
+
+                        ch.pipeline().addLast(new AuthHandler());
                         ch.pipeline().addLast(new MessageRequestHandler());
                         ch.pipeline().addLast(new PacketEncoder());
                     }
