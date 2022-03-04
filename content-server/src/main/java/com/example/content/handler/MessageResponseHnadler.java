@@ -1,12 +1,20 @@
 package com.example.content.handler;
 
 import com.example.content.data.MessageResponsePacket;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
 import java.util.Date;
 
+@ChannelHandler.Sharable
 public class MessageResponseHnadler extends SimpleChannelInboundHandler<MessageResponsePacket> {
+    public static final MessageResponseHnadler INSTANCE = new MessageResponseHnadler();
+
+    private MessageResponseHnadler(){
+
+    }
+
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, MessageResponsePacket messageResponsePacket) throws Exception {
         String fromUserId = messageResponsePacket.getFromUserId();

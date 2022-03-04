@@ -2,45 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c301dae4-8135-4c3f-b690-a831cde4edfe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_caucho_hessian_4_0_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/console/CreateGroupConsoleCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/console/JoinGroupConsoleCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/console/ListGroupMembersConsoleCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/console/LoginConsoleCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/console/LogoutConsoleCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/console/QuitGroupConsoleCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/console/SendToGroupConsoleCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/console/SendToUserConsoleCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/CreatGroupRequestPacket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/CreatGroupResponsePacket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/JoinGroupRequestPacket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/JoinGroupResponsetPacket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/ListGroupMembersRequestPacket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/ListGroupMembersResponsePacket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/LogoutRequestPacket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/LogoutResponsePacket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/QuitGroupRequestPacket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/QuitGroupResponsePacket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/SendToGroupRequestPacket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/SendToGroupResponsePacket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/CreatGroupRequestHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/CreatGroupResponseHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/JoinGroupRequestHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/JoinGroupResponseHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/ListGroupMembersRequestHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/ListGroupMembersResponseHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/QuitGroupRequestHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/QuitGroupResponseHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/SendToGroupRequestHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/SendToGroupResponseHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/serializ/ConsoleCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/serializ/impl/ConsoleCommandManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/IMHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/PackerCodeC.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/data/PackerCodeC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/decode/SessionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/decode/SessionUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/enmus/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/enmus/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/decode/PacketDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/decode/PacketDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/AuthHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/AuthHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/CreatGroupRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/CreatGroupRequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/CreatGroupResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/CreatGroupResponseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/JoinGroupRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/JoinGroupRequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/JoinGroupResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/JoinGroupResponseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/ListGroupMembersRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/ListGroupMembersRequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/ListGroupMembersResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/ListGroupMembersResponseHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/LoginRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/LoginRequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/LoginResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/LoginResponseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/MessageRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/MessageRequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/MessageResponseHnadler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/MessageResponseHnadler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/QuitGroupRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/QuitGroupRequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/QuitGroupResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/QuitGroupResponseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/SendToGroupRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/SendToGroupRequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/SendToGroupResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/SendToGroupResponseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/ServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/ServerHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/netty/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/netty/NettyClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-server/src/main/java/com/example/content/netty/NettyServer.java" afterDir="false" />
     </list>
@@ -343,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646286548935</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="群聊功能完结">
+      <created>1646377821455</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1646377821455</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +346,8 @@
     <MESSAGE value="拆包与粘包的实践" />
     <MESSAGE value="热插拔的实践" />
     <MESSAGE value="单聊实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="单聊实现" />
+    <MESSAGE value="群聊功能完结" />
+    <option name="LAST_COMMIT_MESSAGE" value="群聊功能完结" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Inspections" timestamp="1638279374329">
@@ -370,18 +358,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1646274933304" />
-    <state x="765" y="229" width="629" height="581" key="#com.intellij.ide.util.MemberChooser" timestamp="1646375089307">
+    <state x="765" y="229" width="629" height="581" key="#com.intellij.ide.util.MemberChooser" timestamp="1646379796055">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" width="629" height="581" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1646375089307" />
+    <state x="765" y="229" width="629" height="581" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1646379796055" />
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1639993807891">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1639993807891" />
-    <state x="416" y="115" key="CommitChangelistDialog2" timestamp="1646286548498">
+    <state x="416" y="115" key="CommitChangelistDialog2" timestamp="1646377820941">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="416" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1646286548498" />
+    <state x="416" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1646377820941" />
     <state x="40" y="88" key="DiffContextDialog" timestamp="1639995243717">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -390,22 +378,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1646146633717" />
-    <state width="1877" height="495" key="GridCell.Tab.0.bottom" timestamp="1646376505852">
+    <state width="1877" height="418" key="GridCell.Tab.0.bottom" timestamp="1646381097291">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="495" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1646376505852" />
-    <state width="1877" height="495" key="GridCell.Tab.0.center" timestamp="1646376505850">
+    <state width="1877" height="418" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1646381097291" />
+    <state width="1877" height="418" key="GridCell.Tab.0.center" timestamp="1646381097291">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="495" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1646376505850" />
-    <state width="1877" height="495" key="GridCell.Tab.0.left" timestamp="1646376505850">
+    <state width="1877" height="418" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1646381097291" />
+    <state width="1877" height="418" key="GridCell.Tab.0.left" timestamp="1646381097291">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="495" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1646376505850" />
-    <state width="1877" height="495" key="GridCell.Tab.0.right" timestamp="1646376505851">
+    <state width="1877" height="418" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1646381097291" />
+    <state width="1877" height="418" key="GridCell.Tab.0.right" timestamp="1646381097291">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="495" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1646376505851" />
+    <state width="1877" height="418" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1646381097291" />
     <state width="1877" height="446" key="GridCell.Tab.1.bottom" timestamp="1646374119347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -446,18 +434,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1646147492988" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1646286550006">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1646377823998">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1646286550006" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1646377823998" />
     <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1646202192475">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1646202192475" />
-    <state x="636" y="253" width="786" height="600" key="find.popup" timestamp="1646362188361">
+    <state x="636" y="253" width="786" height="600" key="find.popup" timestamp="1646380556904">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="636" y="253" width="786" height="600" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1646362188361" />
+    <state x="636" y="253" width="786" height="600" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1646380556904" />
     <state x="334" y="221" key="new project wizard" timestamp="1638330698242">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -482,17 +470,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/ServerHandler.java</url>
-          <line>12</line>
+          <line>19</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/MessageRequestHandler.java</url>
-          <line>17</line>
+          <line>27</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/content-server/src/main/java/com/example/content/handler/QuitGroupRequestHandler.java</url>
-          <line>13</line>
+          <line>18</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>

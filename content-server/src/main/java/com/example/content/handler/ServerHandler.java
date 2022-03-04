@@ -2,12 +2,19 @@ package com.example.content.handler;
 
 import com.example.content.data.*;
 import io.netty.buffer.ByteBuf;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
 import java.util.Date;
 
+@ChannelHandler.Sharable
 public class ServerHandler extends ChannelInboundHandlerAdapter {
+
+    public static final ServerHandler INSTANCE = new ServerHandler();
+
+    private ServerHandler() {}
+
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         ByteBuf byteBuf = (ByteBuf) msg;

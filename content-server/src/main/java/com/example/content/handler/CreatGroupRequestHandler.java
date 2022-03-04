@@ -4,6 +4,7 @@ import com.example.content.data.CreatGroupRequestPacket;
 import com.example.content.data.CreatGroupResponsePacket;
 import com.example.content.decode.SessionUtil;
 import io.netty.channel.Channel;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.group.ChannelGroup;
@@ -14,7 +15,12 @@ import java.util.List;
 import java.util.Random;
 import java.util.UUID;
 
+@ChannelHandler.Sharable
 public class CreatGroupRequestHandler extends SimpleChannelInboundHandler<CreatGroupRequestPacket> {
+    public static final  CreatGroupRequestHandler INSTANCE = new CreatGroupRequestHandler();
+
+    private CreatGroupRequestHandler() {}
+
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, CreatGroupRequestPacket creatGroupRequestPacket) throws Exception {
         List<String> userIdList = creatGroupRequestPacket.getUserIdList();

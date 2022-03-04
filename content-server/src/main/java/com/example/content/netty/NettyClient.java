@@ -33,23 +33,21 @@ public class NettyClient {
                 @Override
                 protected void initChannel(Channel ch){
                  ch.pipeline().addLast(new Spliter());
-                 ch.pipeline().addLast(new PacketDecoder());
+                 ch.pipeline().addLast( PacketDecoder.INSTANCE);
                  //登陆响应处理器
-                 ch.pipeline().addLast(new LoginResponseHandler());
+                 ch.pipeline().addLast(LoginResponseHandler.INSTANCE);
                  //收消息处理器
-                 ch.pipeline().addLast(new MessageResponseHnadler());
+                 ch.pipeline().addLast(MessageResponseHnadler.INSTANCE);
                  //创建群响应处理器
-                 ch.pipeline().addLast(new CreatGroupResponseHandler());
+                 ch.pipeline().addLast(CreatGroupResponseHandler.INSTANCE);
                  //加群响应处理器
-                 ch.pipeline().addLast(new JoinGroupResponseHandler());
+                 ch.pipeline().addLast(JoinGroupResponseHandler.INSTANCE);
                  //获取群成员处理器
-                 ch.pipeline().addLast(new ListGroupMembersResponseHandler());
+                 ch.pipeline().addLast(ListGroupMembersResponseHandler.INSTANCE);
                 //退群处理器
-                 ch.pipeline().addLast(new QuitGroupResponseHandler());
+                 ch.pipeline().addLast(QuitGroupResponseHandler.INSTANCE);
                  //群发消息处理器
-                 ch.pipeline().addLast(new SendToGroupResponseHandler());
-                 //编码
-                 ch.pipeline().addLast(new PacketEncoder());
+                 ch.pipeline().addLast(SendToGroupResponseHandler.INSTANCE);
                 }
                 });
 

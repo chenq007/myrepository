@@ -3,11 +3,19 @@ package com.example.content.handler;
 import com.example.content.data.JoinGroupRequestPacket;
 import com.example.content.data.JoinGroupResponsetPacket;
 import com.example.content.decode.SessionUtil;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.group.ChannelGroup;
 
+@ChannelHandler.Sharable
 public class JoinGroupRequestHandler extends SimpleChannelInboundHandler<JoinGroupRequestPacket> {
+    public static final JoinGroupRequestHandler INSTANCE =new JoinGroupRequestHandler();
+
+    private JoinGroupRequestHandler() {}
+
+
+
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, JoinGroupRequestPacket joinGroupRequestPacket) throws Exception {
         String groupId = joinGroupRequestPacket.getGroupId();
