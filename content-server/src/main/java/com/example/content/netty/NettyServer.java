@@ -14,6 +14,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import io.netty.handler.codec.string.StringDecoder;
+import io.netty.handler.timeout.IdleStateHandler;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
 
@@ -32,8 +33,11 @@ public class NettyServer {
                 .childHandler(new ChannelInitializer<NioSocketChannel>() {
                     @Override
                     protected void initChannel(NioSocketChannel ch) throws Exception {
+                        ch.pipeline().addLast(new IMIdleStateHandler());
+                        ch.pipeline().addLast(new Spliter());
                         ch.pipeline().addLast(PacketDecoder.INSTANCE);
                         ch.pipeline().addLast(LoginRequestHandler.INSTANCE);
+                        ch.pipeline().addLast(HeartBeatRequestHandler.INSTANCE);
                         ch.pipeline().addLast(AuthHandler.INSTANCE);
                         ch.pipeline().addLast(IMHandler.INSTANCE);
                     }

@@ -32,6 +32,7 @@ public class NettyClient {
                 .handler(new ChannelInitializer<Channel>() {
                 @Override
                 protected void initChannel(Channel ch){
+                 ch.pipeline().addLast(new IMIdleStateHandler());
                  ch.pipeline().addLast(new Spliter());
                  ch.pipeline().addLast( PacketDecoder.INSTANCE);
                  //登陆响应处理器

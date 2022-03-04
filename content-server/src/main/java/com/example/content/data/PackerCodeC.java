@@ -49,6 +49,8 @@ public class PackerCodeC {
         packetTypeMap.put(LIST_GROUP_MEMBERS_RESPONSE,ListGroupMembersResponsePacket.class);
         packetTypeMap.put(SEND_TO_GROUP_REQUEST,SendToGroupRequestPacket.class);
         packetTypeMap.put(SEND_TO_GROUP_RESPONSE,SendToGroupResponsePacket.class);
+        packetTypeMap.put(SEND_HEART_BEAT_REQUEST,HeartBeatRequestPacket.class);
+        packetTypeMap.put(SEND_HEART_BEAT_RESPONSE,HeartBeatResponsePacket.class);
 
         serializerMap = new HashMap<>();
         Serializer serializer = new JSONSerializer();
