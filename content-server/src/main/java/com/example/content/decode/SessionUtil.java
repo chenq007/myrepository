@@ -3,13 +3,15 @@ package com.example.content.decode;
 import com.example.content.data.Session;
 import com.example.content.serializ.Attributes;
 import io.netty.channel.Channel;
+import io.netty.channel.group.ChannelGroup;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 public class SessionUtil {
     private static final Map<String, Channel> userIdChannelMap = new HashMap<>();
+
+    private static final Map<String, ChannelGroup> groupChannelMap = new HashMap<>();
 
     public static void bindSession(Session session, Channel channel) {
         userIdChannelMap.put(session.getUserId(),channel);
@@ -23,6 +25,10 @@ public class SessionUtil {
         }
     }
 
+    public static void setGroupChannelMap(String groupId,ChannelGroup channelGroup) {
+        groupChannelMap.put(groupId,channelGroup);
+    }
+
     public static boolean hasLogin(Channel channel) {
         return channel.hasAttr(Attributes.SESSION);
     }
@@ -34,4 +40,6 @@ public class SessionUtil {
     public static Channel getChannel(String userId) {
         return userIdChannelMap.get(userId);
     }
+
+    public static ChannelGroup getChannelGroup(String groupId){return groupChannelMap.get(groupId);}
 }

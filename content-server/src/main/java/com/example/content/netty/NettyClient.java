@@ -1,5 +1,6 @@
 package com.example.content.netty;
 
+import com.example.content.console.LoginConsoleCommand;
 import com.example.content.data.LoginRequestPacket;
 import com.example.content.data.LoginResponsePacket;
 import com.example.content.data.MessageRequestPacket;
@@ -8,8 +9,8 @@ import com.example.content.decode.PacketDecoder;
 import com.example.content.decode.PacketEncoder;
 import com.example.content.decode.SessionUtil;
 import com.example.content.decode.Spliter;
-import com.example.content.handler.LoginResponseHandler;
-import com.example.content.handler.MessageResponseHnadler;
+import com.example.content.handler.*;
+import com.example.content.serializ.impl.ConsoleCommandManager;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
@@ -33,8 +34,21 @@ public class NettyClient {
                 protected void initChannel(Channel ch){
                  ch.pipeline().addLast(new Spliter());
                  ch.pipeline().addLast(new PacketDecoder());
+                 //登陆响应处理器
                  ch.pipeline().addLast(new LoginResponseHandler());
+                 //收消息处理器
                  ch.pipeline().addLast(new MessageResponseHnadler());
+                 //创建群响应处理器
+                 ch.pipeline().addLast(new CreatGroupResponseHandler());
+                 //加群响应处理器
+                 ch.pipeline().addLast(new JoinGroupResponseHandler());
+                 //获取群成员处理器
+                 ch.pipeline().addLast(new ListGroupMembersResponseHandler());
+                //退群处理器
+                 ch.pipeline().addLast(new QuitGroupResponseHandler());
+                 //群发消息处理器
+                 ch.pipeline().addLast(new SendToGroupResponseHandler());
+                 //编码
                  ch.pipeline().addLast(new PacketEncoder());
                 }
                 });
@@ -63,35 +77,21 @@ public class NettyClient {
     }
 
     private static void startConsoleThread(Channel channel){
-        Scanner sc =new Scanner(System.in);
+        ConsoleCommandManager consoleCommandManager = new ConsoleCommandManager();
+        LoginConsoleCommand loginConsoleCommand = new LoginConsoleCommand();
+        Scanner scanner =new Scanner(System.in);
         LoginRequestPacket loginRequestPacket = new LoginRequestPacket();
         new Thread(() ->{
             while (!Thread.interrupted()) {
                 if (!SessionUtil.hasLogin(channel)){
-                    System.out.print("输入用户名登陆:");
-
-                    String userName = sc.nextLine();
-                    loginRequestPacket.setUserName(userName);
-                    loginRequestPacket.setPassWord("pwd123");
-
-                       channel.writeAndFlush(loginRequestPacket);
-                       waitForLoginResponse();
-
+                    loginConsoleCommand.exec(scanner,channel);
                 } else {
-                    String toUserId =sc.next();
-                    String message =sc.next();
-                    channel.writeAndFlush(new MessageRequestPacket(toUserId,message));
+                    consoleCommandManager.exec(scanner,channel);
                 }
             }
         }).start();
     }
 
-    private static void waitForLoginResponse(){
-        try {
-            Thread.sleep(1000);
-        }catch (Exception ingrod){
 
-        }
-    }
 
 }

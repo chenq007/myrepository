@@ -43,7 +43,7 @@ public class LoginRequestHandler extends SimpleChannelInboundHandler<LoginReques
 
 
     private String randomUserId(){
-        return UUID.randomUUID().toString().split("-")[0];
+        return String.valueOf(new Random().nextInt(50)+1);
     }
 
     @Override
